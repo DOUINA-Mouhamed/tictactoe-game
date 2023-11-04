@@ -32,11 +32,13 @@ int main()
 
         player_move();
         winner = check_winner();
+        printf("%c\n", winner);
         if (winner != ' ' || check_free_spaces() == 0) {
             break;
         }
         computer_move();
         winner = check_winner();
+        printf("%c\n", winner);
         if (winner != ' ' || check_free_spaces() == 0) {
             break;
         }
@@ -138,22 +140,18 @@ char check_winner()
     }
     //Deuxième partie de la fonction pour check les colonnes
     for (i = 0; i < 3; i++) {
-        if (board[0][i] == board[1][0] && board[0][i] == board[2][i]) {
+        if (board[0][i] == board[1][i] && board[0][i] == board[2][i]) {
             return board[i][0];
         }
     }
     //Troisième partie de la fonction pour check la diagonale top left to bot right
-    for (i = 0; i < 3; i++) {
         if (board[0][0] == board[1][1] && board[0][0] == board[2][2]) {
             return board[0][0];
         }
-    }
     //Quatrième partie de la fonction pour check la diagonale bot left to top right
-    for (i = 0; i < 3; i++) {
         if (board[0][2] == board[1][1] && board[0][2] == board[2][0]) {
             return board[0][2];
         }
-    }
     return ' '; //Toujours pas de gagnant
 }
 
