@@ -9,3 +9,4 @@ Le code est accompagné de nombreux commentaires permettant une compréhension f
 TODO ⚓
 
 * Interface graphique
+* Mode multijoueur
