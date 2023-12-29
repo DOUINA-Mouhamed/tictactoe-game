@@ -2,7 +2,7 @@
 //  PERSONAL PROJECT
 //  tictactoe.c
 //  PROJECT DESCRIPTION :
-//  Un jeu "tictactoe" codé en C, en anglais.
+//  Un jeu "tictactoe" codé en C.
 */
 
 #include <stdio.h>
